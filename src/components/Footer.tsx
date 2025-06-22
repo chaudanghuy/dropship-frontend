@@ -1,125 +1,182 @@
-import React from 'react';
+import Link from 'next/link';
+import { Package, Phone, Mail, MapPin, Facebook, Twitter, Instagram, Youtube } from 'lucide-react';
 
 const Footer = () => {
     return (
         <footer className="bg-gray-900 text-white">
-            {/* Main Footer Content */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8">
-                    {/* Categories */}
+            {/* Main footer content */}
+            <div className="container mx-auto px-4 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Company Info */}
                     <div>
-                        <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                            Categories
-                        </h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Graphics & Design</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Digital Marketing</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Writing & Translation</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Video & Animation</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Music & Audio</a></li>
+                        <div className="flex items-center space-x-2 mb-4">
+                            <div className="bg-orange-600 text-white p-2 rounded-lg">
+                                <Package className="h-6 w-6" />
+                            </div>
+                            <div>
+                                <h3 className="text-xl font-bold">BuildMart</h3>
+                                <p className="text-xs text-gray-400">Hardware & Building Supplies</p>
+                            </div>
+                        </div>
+                        <p className="text-gray-300 mb-4">
+                            Your trusted source for quality building materials, tools, and hardware supplies.
+                            Serving contractors and DIY enthusiasts since 1985.
+                        </p>
+                        <div className="flex space-x-4">
+                            <Link href="#" className="text-gray-400 hover:text-white">
+                                <Facebook className="h-5 w-5" />
+                            </Link>
+                            <Link href="#" className="text-gray-400 hover:text-white">
+                                <Twitter className="h-5 w-5" />
+                            </Link>
+                            <Link href="#" className="text-gray-400 hover:text-white">
+                                <Instagram className="h-5 w-5" />
+                            </Link>
+                            <Link href="#" className="text-gray-400 hover:text-white">
+                                <Youtube className="h-5 w-5" />
+                            </Link>
+                        </div>
+                    </div>
+
+                    {/* Customer Service */}
+                    <div>
+                        <h4 className="text-lg font-semibold mb-4">Customer Service</h4>
+                        <ul className="space-y-2 text-gray-300">
+                            <li>
+                                <Link href="/help" className="hover:text-white">
+                                    Help Center
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/orders" className="hover:text-white">
+                                    Track Your Order
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/returns" className="hover:text-white">
+                                    Returns & Exchanges
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/shipping" className="hover:text-white">
+                                    Shipping Information
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/warranty" className="hover:text-white">
+                                    Warranty Information
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/contact" className="hover:text-white">
+                                    Contact Us
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* About */}
+                    {/* Shop Categories */}
                     <div>
-                        <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                            About
-                        </h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Careers</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Press & News</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Partnerships</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Privacy Policy</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Terms of Service</a></li>
+                        <h4 className="text-lg font-semibold mb-4">Shop Categories</h4>
+                        <ul className="space-y-2 text-gray-300">
+                            <li>
+                                <Link href="/category/lumber" className="hover:text-white">
+                                    Lumber & Building Materials
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/category/tools" className="hover:text-white">
+                                    Tools & Equipment
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/category/hardware" className="hover:text-white">
+                                    Hardware & Fasteners
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/category/electrical" className="hover:text-white">
+                                    Electrical Supplies
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/category/plumbing" className="hover:text-white">
+                                    Plumbing
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href="/category/concrete" className="hover:text-white">
+                                    Concrete & Masonry
+                                </Link>
+                            </li>
                         </ul>
                     </div>
 
-                    {/* Support */}
+                    {/* Contact Info */}
                     <div>
-                        <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                            Support
-                        </h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Help & Support</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Trust & Safety</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Selling on Fiverr</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Buying on Fiverr</a></li>
-                        </ul>
-                    </div>
+                        <h4 className="text-lg font-semibold mb-4">Contact Info</h4>
+                        <div className="space-y-3 text-gray-300">
+                            <div className="flex items-start space-x-3">
+                                <MapPin className="h-5 w-5 mt-0.5 text-orange-500" />
+                                <div>
+                                    <p>123 Industrial Drive</p>
+                                    <p>Construction City, CC 12345</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <Phone className="h-5 w-5 text-orange-500" />
+                                <div>
+                                    <p>(555) 123-BUILD</p>
+                                    <p className="text-sm text-gray-400">Mon-Fri: 7AM-7PM, Sat: 8AM-6PM</p>
+                                </div>
+                            </div>
+                            <div className="flex items-center space-x-3">
+                                <Mail className="h-5 w-5 text-orange-500" />
+                                <p>info@buildmart.com</p>
+                            </div>
+                        </div>
 
-                    {/* Community */}
-                    <div>
-                        <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                            Community
-                        </h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Customer Success Stories</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Community Hub</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Forum</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Events</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Blog</a></li>
-                        </ul>
-                    </div>
-
-                    {/* More From Fiverr */}
-                    <div>
-                        <h3 className="text-sm font-semibold text-gray-300 uppercase tracking-wider mb-4">
-                            More From Fiverr
-                        </h3>
-                        <ul className="space-y-2">
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Fiverr Business</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Fiverr Pro</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Fiverr Logo Maker</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Fiverr Guides</a></li>
-                            <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Get Inspired</a></li>
-                        </ul>
+                        {/* Newsletter */}
+                        <div className="mt-6">
+                            <h5 className="font-semibold mb-2">Newsletter</h5>
+                            <p className="text-sm text-gray-400 mb-3">
+                                Get updates on new products and special offers
+                            </p>
+                            <div className="flex">
+                                <input
+                                    type="email"
+                                    placeholder="Your email"
+                                    className="flex-1 px-3 py-2 bg-gray-800 border border-gray-600 rounded-l-lg focus:outline-none focus:border-orange-500 text-white"
+                                />
+                                <button className="px-4 py-2 bg-orange-600 hover:bg-orange-700 rounded-r-lg transition-colors">
+                                    Subscribe
+                                </button>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
 
-            {/* Bottom Footer */}
+            {/* Bottom bar */}
             <div className="border-t border-gray-800">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-6">
-                    <div className="flex flex-col md:flex-row items-center justify-between">
-                        {/* Logo and Copyright */}
-                        <div className="flex items-center space-x-4 mb-4 md:mb-0">
-                            <div className="text-2xl font-bold text-green-400">
-                                fiverr<span className="text-white">.</span>
-                            </div>
-                            <span className="text-gray-400 text-sm">
-                                © Fiverr International Ltd. 2024
-                            </span>
+                <div className="container mx-auto px-4 py-6">
+                    <div className="flex flex-col md:flex-row justify-between items-center">
+                        <div className="text-gray-400 text-sm mb-4 md:mb-0">
+                            © 2024 BuildMart. All rights reserved.
                         </div>
-
-                        {/* Social Media and Language */}
-                        <div className="flex items-center space-x-6">
-                            {/* Social Media Icons */}
-                            <div className="flex items-center space-x-4">
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
-                                    </svg>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M22.46 6c-.77.35-1.6.58-2.46.69.88-.53 1.56-1.37 1.88-2.38-.83.5-1.75.85-2.72 1.05C18.37 4.5 17.26 4 16 4c-2.35 0-4.27 1.92-4.27 4.29 0 .34.04.67.11.98C8.28 9.09 5.11 7.38 3 4.79c-.37.63-.58 1.37-.58 2.15 0 1.49.75 2.81 1.91 3.56-.71 0-1.37-.2-1.95-.5v.03c0 2.08 1.48 3.82 3.44 4.21a4.22 4.22 0 0 1-1.93.07 4.28 4.28 0 0 0 4 2.98 8.521 8.521 0 0 1-5.33 1.84c-.34 0-.68-.02-1.02-.06C3.44 20.29 5.7 21 8.12 21 16 21 20.33 14.46 20.33 8.79c0-.19 0-.37-.01-.56.84-.6 1.56-1.36 2.14-2.23z" />
-                                    </svg>
-                                </a>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
-                                        <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.097.118.112.222.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.758-1.378l-.749 2.848c-.269 1.045-1.004 2.352-1.498 3.146 1.123.345 2.306.535 3.55.535 6.624 0 11.99-5.367 11.99-11.987C24.007 5.367 18.641.001 12.017.001z" />
-                                    </svg>
-                                </a>
-                            </div>
-
-                            {/* Language Selector */}
-                            <div className="flex items-center space-x-2 text-gray-400">
-                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9v-9m0-9v9m0 9c-5 0-9-4-9-9s4-9 9-9" />
-                                </svg>
-                                <span className="text-sm">English</span>
-                                <span className="text-sm">USD</span>
-                            </div>
+                        <div className="flex space-x-6 text-sm text-gray-400">
+                            <Link href="/privacy" className="hover:text-white">
+                                Privacy Policy
+                            </Link>
+                            <Link href="/terms" className="hover:text-white">
+                                Terms of Service
+                            </Link>
+                            <Link href="/accessibility" className="hover:text-white">
+                                Accessibility
+                            </Link>
+                            <Link href="/sitemap" className="hover:text-white">
+                                Sitemap
+                            </Link>
                         </div>
                     </div>
                 </div>
